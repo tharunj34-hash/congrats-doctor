@@ -1,0 +1,1655 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: #f6f0e3;
+
+    color: #172235;
+
+    font-family: "Libre Baskerville", serif;
+
+    line-height: 1.8;
+
+    overflow-x: hidden;
+
+}
+
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+/* =========================================
+   COLORS
+========================================= */
+
+:root {
+
+    --navy: #071a33;
+
+    --navy-light: #10294a;
+
+    --navy-dark: #041326;
+
+    --gold: #c9a45c;
+
+    --gold-light: #e4c98a;
+
+    --gold-dark: #967438;
+
+    --ivory: #f6f0e3;
+
+    --white: #fffdf8;
+
+    --text: #172235;
+
+    --muted: #6b6255;
+
+    --border: rgba(201,164,92,.5);
+
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(7,26,51,.97);
+
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.navbar {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 18px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.logo {
+
+    color: var(--gold-light);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+.nav-links a {
+
+    color: white;
+
+    font-size: 13px;
+
+    transition: .3s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+.menu-btn {
+
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 25px;
+
+}
+
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+
+    padding: 120px 8%;
+
+}
+
+
+.section-heading {
+
+    max-width: 850px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+}
+
+
+.section-heading h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(48px,7vw,80px);
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-heading p:last-child {
+
+    color: var(--muted);
+
+}
+
+
+.section-heading.light h2 {
+
+    color: white;
+
+}
+
+
+.section-heading.light p:last-child {
+
+    color: #d5dbe3;
+
+}
+
+
+.section-label {
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.gold-line {
+
+    width: 90px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 25px auto;
+
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #18365c 0%,
+            #071a33 65%
+        );
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 120px 20px 80px;
+
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 25px;
+
+    border: 1px solid rgba(201,164,92,.25);
+
+}
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 35px;
+
+    border: 1px solid rgba(201,164,92,.12);
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.hero-background-ornament {
+
+    position: absolute;
+
+    color: rgba(201,164,92,.12);
+
+    font-size: 250px;
+
+}
+
+
+.ornament-one {
+
+    left: -80px;
+
+    top: 15%;
+
+}
+
+
+.ornament-two {
+
+    right: -80px;
+
+    bottom: 10%;
+
+}
+
+
+.hero-ornament {
+
+    color: var(--gold);
+
+    font-size: 42px;
+
+}
+
+
+.eyebrow {
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero h1 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(65px,12vw,145px);
+
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    line-height: .85;
+
+}
+
+
+.hero-subtitle {
+
+    color: #e0e5eb;
+
+    font-size: 15px;
+
+}
+
+
+.doctor-emblem {
+
+    width: 190px;
+
+    height: 190px;
+
+    margin: 45px auto 30px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+}
+
+
+.doctor-emblem::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 9px;
+
+    border: 1px solid rgba(201,164,92,.6);
+
+    border-radius: 50%;
+
+}
+
+
+.emblem-top {
+
+    color: var(--gold-light);
+
+}
+
+
+.emblem-tooth {
+
+    color: var(--gold-light);
+
+    font-size: 48px;
+
+}
+
+
+.emblem-text {
+
+    color: var(--gold-light);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+}
+
+
+.doctor-emblem small {
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+    color: #d9dce2;
+
+}
+
+
+.first-doctor {
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: var(--gold-light);
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-button {
+
+    display: inline-block;
+
+    border: 1px solid var(--gold);
+
+    padding: 13px 30px;
+
+    color: white;
+
+    transition: .3s;
+
+}
+
+
+.hero-button:hover {
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+}
+
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.intro h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(48px,7vw,82px);
+
+    line-height: .95;
+
+}
+
+
+.intro-text {
+
+    max-width: 680px;
+
+    margin: 35px auto 0;
+
+    color: var(--muted);
+
+}
+
+/* =========================================
+   DOCTOR
+========================================= */
+
+.doctor {
+
+    background: var(--navy);
+
+    color: white;
+
+}
+
+
+.timeline {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    position: relative;
+
+}
+
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 1px;
+
+    background: var(--gold);
+
+}
+
+
+.timeline-item {
+
+    min-height: 190px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 50px 1fr;
+
+    align-items: center;
+
+}
+
+
+.timeline-date {
+
+    text-align: right;
+
+    padding-right: 30px;
+
+    color: var(--gold-light);
+
+    font-family: "Cormorant Garamond",serif;
+
+    font-size: 27px;
+
+}
+
+
+.timeline-dot {
+
+    width: 15px;
+
+    height: 15px;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--gold);
+
+    background: var(--navy);
+
+    justify-self: center;
+
+    z-index: 2;
+
+}
+
+
+.timeline-content {
+
+    padding-left: 30px;
+
+}
+
+
+.timeline-label {
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.timeline-content h3 {
+
+    font-family: "Cormorant Garamond",serif;
+
+    color: var(--gold-light);
+
+    font-size: 36px;
+
+}
+
+
+.timeline-content p {
+
+    color: #ccd3dc;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =========================================
+   ACHIEVEMENT
+========================================= */
+
+.achievement {
+
+    background: var(--ivory);
+
+    text-align: center;
+
+}
+
+
+.achievement-inner {
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+
+.achievement-symbol {
+
+    color: var(--gold);
+
+    font-size: 35px;
+
+}
+
+
+.achievement h2 {
+
+    font-family: "Cormorant Garamond",serif;
+
+    font-size: clamp(60px,8vw,105px);
+
+    line-height: .82;
+
+    font-weight: 500;
+
+}
+
+
+.achievement p {
+
+    max-width: 620px;
+
+    margin: 25px auto;
+
+    color: var(--muted);
+
+}
+
+
+.achievement-seal {
+
+    width: 130px;
+
+    height: 130px;
+
+    margin: 45px auto 0;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.achievement-seal span {
+
+    color: var(--gold-dark);
+
+    font-family: "Cormorant Garamond",serif;
+
+    font-size: 35px;
+
+}
+
+
+.achievement-seal small {
+
+    color: var(--muted);
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+/* =========================================
+   VALUES
+========================================= */
+
+.values {
+
+    background: #fffdf8;
+
+}
+
+
+.values-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 20px;
+
+}
+
+
+.value-card {
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    border-top: 1px solid var(--gold);
+
+    border-bottom: 1px solid #ddd2bc;
+
+}
+
+
+.value-card span {
+
+    color: var(--gold);
+
+    font-family: "Cormorant Garamond",serif;
+
+    font-size: 25px;
+
+}
+
+
+.value-card h3 {
+
+    font-family: "Cormorant Garamond",serif;
+
+    font-size: 30px;
+
+}
+
+
+.value-card p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+
+/* =========================================
+   BLESSINGS
+========================================= */
+
+.blessings {
+
+    background: var(--navy);
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+.quote-slider {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    min-height: 220px;
+
+}
+
+
+.quote-slider blockquote {
+
+    display: none;
+
+}
+
+
+.quote-slider blockquote.active-quote {
+
+    display: block;
+
+    animation: fadeQuote .6s ease;
+
+}
+
+
+.big-quote {
+
+    color: var(--gold);
+
+    font-size: 80px;
+
+    line-height: .4;
+
+}
+
+
+.quote-slider p {
+
+    font-family: "Cormorant Garamond",serif;
+
+    font-size: clamp(35px,5vw,58px);
+
+    line-height: 1.1;
+
+    color: #f4ead5;
+
+}
+
+
+.quote-controls {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.quote-controls button {
+
+    background: transparent;
+
+    color: var(--gold-light);
+
+    border: 1px solid var(--gold);
+
+    width: 45px;
+
+    height: 45px;
+
+}
+
+
+.quote-controls button:hover {
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+}
+
+
+.quote-counter {
+
+    color: #cbd2dc;
+
+    font-size: 11px;
+
+}
+
+
+@keyframes fadeQuote {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================================
+   MESSAGE WALL
+========================================= */
+
+.messages {
+
+    background: var(--white);
+
+}
+
+
+.message-form {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.message-form label {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-top: 15px;
+
+}
+
+
+.message-form input,
+.message-form textarea {
+
+    width: 100%;
+
+    border: 1px solid #d5c7ad;
+
+    background: var(--ivory);
+
+    padding: 14px;
+
+    margin-top: 7px;
+
+    outline: none;
+
+    resize: vertical;
+
+}
+
+
+.message-form input:focus,
+.message-form textarea:focus {
+
+    border-color: var(--gold);
+
+}
+
+
+.character-count {
+
+    text-align: right;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 5px;
+
+}
+
+
+.message-form button {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: 1px solid var(--gold);
+
+    background: var(--navy);
+
+    color: white;
+
+}
+
+
+.message-form button:hover {
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+}
+
+
+.message-list {
+
+    max-width: 800px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    gap: 20px;
+
+}
+
+
+.message-card {
+
+    padding: 25px;
+
+    background: var(--ivory);
+
+    border-left: 3px solid var(--gold);
+
+}
+
+
+.message-card strong {
+
+    font-family: "Cormorant Garamond",serif;
+
+    font-size: 25px;
+
+}
+
+
+.message-card p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.empty-message {
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+
+/* =========================================
+   PROMISE
+========================================= */
+
+.promise {
+
+    background: #eee5d4;
+
+    text-align: center;
+
+}
+
+
+.promise-inner {
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+
+.promise h2 {
+
+    font-family: "Cormorant Garamond",serif;
+
+    font-size: clamp(50px,7vw,80px);
+
+    line-height: .9;
+
+}
+
+
+.promise-line {
+
+    width: 60px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 30px auto;
+
+}
+
+
+.promise-inner > p:not(.section-label) {
+
+    color: var(--muted);
+
+}
+
+
+.promise-points {
+
+    margin-top: 40px;
+
+    display: grid;
+
+    gap: 15px;
+
+}
+
+
+.promise-points div {
+
+    font-size: 13px;
+
+}
+
+
+.promise-points span {
+
+    color: var(--gold);
+
+    margin-right: 8px;
+
+}
+
+
+
+/* =========================================
+   FINAL TRIBUTE
+========================================= */
+
+.final-tribute {
+
+    background: var(--navy);
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+.final-inner {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.final-ornament {
+
+    color: var(--gold);
+
+    font-size: 45px;
+
+}
+
+
+.final-tribute h2 {
+
+    font-family: "Cormorant Garamond",serif;
+
+    font-size: clamp(55px,8vw,105px);
+
+    line-height: .87;
+
+    font-weight: 500;
+
+}
+
+
+.tribute-text {
+
+    max-width: 680px;
+
+    margin: 30px auto;
+
+    color: #d6dbe2;
+
+    font-size: 14px;
+
+}
+
+
+.tribute-text strong {
+
+    color: var(--gold-light);
+
+}
+
+
+.signature {
+
+    margin-top: 65px;
+
+    color: var(--gold-light);
+
+    font-size: 12px;
+
+}
+
+
+.signature span {
+
+    display: block;
+
+    font-family: "Cormorant Garamond",serif;
+
+    font-size: 42px;
+
+    margin-top: 15px;
+
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    background: var(--navy-dark);
+
+    color: #aeb6c1;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+}
+
+
+.footer-symbol {
+
+    color: var(--gold);
+
+    font-size: 32px;
+
+}
+
+
+.footer p {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.footer small {
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 9px;
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .memory-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+
+    }
+
+
+    .values-grid {
+
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+
+        padding: 16px 20px;
+
+    }
+
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 64px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: var(--navy);
+
+        display: none;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 0;
+
+    }
+
+
+    .nav-links.show {
+
+        display: flex;
+
+    }
+
+
+    .nav-links a {
+
+        padding: 14px;
+
+        border-bottom: 1px solid rgba(201,164,92,.15);
+
+    }
+
+
+    .menu-btn {
+
+        display: block;
+
+    }
+
+
+    .hero {
+
+        padding: 120px 25px 70px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 58px;
+
+    }
+
+
+    .first-doctor {
+
+        font-size: 8px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .doctor-emblem {
+
+        width: 165px;
+
+        height: 165px;
+
+    }
+
+
+    .section {
+
+        padding: 85px 6%;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 52px;
+
+    }
+
+
+    .quote-box p {
+
+        font-size: 30px;
+
+    }
+
+
+    .timeline::before {
+
+        left: 15px;
+
+    }
+
+
+    .timeline-item {
+
+        display: grid;
+
+        grid-template-columns: 35px 1fr;
+
+        min-height: 190px;
+
+    }
+
+
+    .timeline-date {
+
+        grid-column: 2;
+
+        grid-row: 1;
+
+        text-align: left;
+
+        padding: 0;
+
+    }
+
+
+    .timeline-dot {
+
+        grid-column: 1;
+
+        grid-row: 1 / span 2;
+
+        justify-self: start;
+
+        margin-left: 8px;
+
+    }
+
+
+    .timeline-content {
+
+        grid-column: 2;
+
+        grid-row: 2;
+
+        padding: 0;
+
+    }
+
+
+    .timeline-content h3 {
+
+        font-size: 31px;
+
+    }
+
+
+    .values-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .quote-slider {
+
+        min-height: 280px;
+
+    }
+
+
+    .quote-slider p {
+
+        font-size: 35px;
+
+    }
+
+
+    .final-tribute h2 {
+
+        font-size: 58px;
+
+    }
+
+}
+
+
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    .final-tribute h2 {
+
+        font-size: 50px;
+
+    }
+
+}
+
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+
+    outline: 2px solid var(--gold);
+
+    outline-offset: 4px;
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+    * {
+
+        animation: none !important;
+
+        transition: none !important;
+
+    }
+
+}
